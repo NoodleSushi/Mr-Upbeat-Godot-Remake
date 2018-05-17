@@ -10,7 +10,7 @@ const AUDIO_4 = preload("res://Audio/rh_four.wav")
 
 #GLOBAL AND GAMEPLAY STATES
 enum {GAME_IN,GAME_OUT}
-enum {GLOBAL_COUNT,GLOBAL_PLAY}
+enum {GLOBAL_COUNT,GLOBAL_PLAY,GLOBAL_OVER}
 
 #AUDIO PLAYBACK SEQUENCES
 var audio_step = [AUDIO_TICK_LEFT,AUDIO_BEEP,AUDIO_TICK_RIGHT,AUDIO_BEEP]
@@ -46,9 +46,11 @@ func add_score():
 	Score += 1
 	$Score.set_text(str(Score))
 
-func _epicfail():
+func _epicfail(index):
 	#get_tree().quit()
 	print("fail",beat_timer)
+	GlobalState = GLOBAL_OVER
+	$MrUpbeat/move.play((["trip_left","trip_right"])[index])
 
 func play_audio(Audio):
 	if typeof(Audio) != TYPE_STRING:
@@ -88,6 +90,8 @@ func event_count(delta):
 		play_audio(audio_count[tick_phase])
 		tick_phase = (tick_phase+1)%17
 		if tick_phase == 16:
+			beat_timer = 0
+			beats = 0
 			tick_phase = 0
 			GlobalState = GLOBAL_PLAY
 	
@@ -107,20 +111,22 @@ func event_play(delta):
 	match InState:
 		GAME_OUT:
 			if mid > spb()-spb()/8:
-				if tick_phase == 1 and !step_left: _epicfail()
-				if tick_phase == 3 and step_left: _epicfail()
+				if tick_phase == 1 and !step_left: _epicfail(1)
+				if tick_phase == 3 and step_left: _epicfail(0)
 				if tick_phase == 1 or tick_phase == 3: InState = GAME_IN
 			pass
 		GAME_IN:
 			if mid > spb()/8:
-				if tick_phase == 2 and step_left: _epicfail()
-				if tick_phase == 0 and !step_left: _epicfail()
+				if tick_phase == 2 and step_left: _epicfail(0)
+				if tick_phase == 0 and !step_left: _epicfail(1)
 				if tick_phase == 2 or tick_phase == 0: InState = GAME_OUT
 			pass
 	if beats > 0: $Metronome.set_rotation_degrees(90+Rotation*60)
 	if (beats+beat_timer)/spb() > 64:
 		Bpm += floor(SpeedUp)
 		SpeedUp += .5
+		beat_timer = 0
+		beats = 0
 		tick_phase = 0
 		GlobalState = GLOBAL_COUNT
 		$Ding.play()
