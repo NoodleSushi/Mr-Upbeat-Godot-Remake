@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/rh_two.wav-e0f7a49b36708a7f59be06e2d84d4d35.sample"
+
+[deps]
+
+source_file="res://Audio/rh_two.wav"
+source_md5="ba572e1ec71ef584af503aba5b51abfc"
+
+dest_files=[ "res://.import/rh_two.wav-e0f7a49b36708a7f59be06e2d84d4d35.sample" ]
+dest_md5="497657dba822be920e21eefa26898df6"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

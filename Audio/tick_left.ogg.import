@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/tick_left.ogg-85b605e37b2cb44406fb02897cf69674.oggstr"
+
+[deps]
+
+source_file="res://Audio/tick_left.ogg"
+source_md5="6a780476aee646d2b970f272cea17288"
+
+dest_files=[ "res://.import/tick_left.ogg-85b605e37b2cb44406fb02897cf69674.oggstr" ]
+dest_md5="480ac28c166b8d8a344ea89ad8a1043b"
+
+[params]
+
+loop=false
+loop_offset=0
