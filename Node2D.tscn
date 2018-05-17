@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Knome.gd" type="Script" id=1]
 [ext_resource path="res://808-Kicks03.wav" type="AudioStream" id=2]
@@ -11,7 +11,7 @@
 [ext_resource path="res://new_dynamicfont.tres" type="DynamicFont" id=9]
 [ext_resource path="res://Audio/ding.wav" type="AudioStream" id=10]
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=1]
 
 resource_name = "INIT"
 length = 0.01
@@ -89,8 +89,44 @@ tracks/5/keys = {
 "update": 1,
 "values": [ false ]
 }
+tracks/6/type = "value"
+tracks/6/path = NodePath("mirror/FallShadow:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("mirror/Motion/Motion4:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("mirror/Motion/Motion3:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=2]
 
 resource_name = "step_left"
 length = 7.0
@@ -169,9 +205,8 @@ tracks/5/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=3]
 
-resource_name = "step_right"
 length = 7.0
 loop = false
 step = 1.0
@@ -248,9 +283,238 @@ tracks/5/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=4]
 
-resource_name = "beep"
+resource_name = "trip_left"
+length = 10.0
+loop = false
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("mirror/FallShadow:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Shadow:Set_Integer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("mirror:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("mirror/Body:Set_Integer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2, 4, 5, 9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 5, 6, 7, 8 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("mirror/Head:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2, 4, 5, 9 ),
+"transitions": PoolRealArray( 0, 0, 0, 0, 0 ),
+"update": 0,
+"values": [ Vector2( 1.34839, -22.1369 ), Vector2( 3.96448, -21.6612 ), Vector2( 8.24537, -23.5638 ), Vector2( 10.3858, -24.5151 ), Vector2( 4.91579, -29.2717 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("mirror/Motion/Motion1:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("mirror/Motion/Motion2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("mirror/Motion/Motion3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("mirror/Motion/Motion4:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "trip_right"
+length = 10.0
+loop = false
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("mirror/FallShadow:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Shadow:Set_Integer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("mirror:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("mirror/Body:Set_Integer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2, 4, 5, 9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 5, 6, 7, 8 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("mirror/Head:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2, 4, 5, 9 ),
+"transitions": PoolRealArray( 0, 0, 0, 0, 0 ),
+"update": 0,
+"values": [ Vector2( 1.34839, -22.1369 ), Vector2( 3.96448, -21.6612 ), Vector2( 8.24537, -23.5638 ), Vector2( 10.3858, -24.5151 ), Vector2( 4.91579, -29.2717 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("mirror/Motion/Motion1:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("mirror/Motion/Motion2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("mirror/Motion/Motion3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("mirror/Motion/Motion4:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=6]
+
 length = 6.0
 loop = false
 step = 1.0
@@ -353,23 +617,38 @@ _sections_unfolded = [ "Region", "Transform" ]
 [node name="mirror" type="Node2D" parent="MrUpbeat" index="1"]
 
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Body" type="Node2D" parent="MrUpbeat/mirror" index="0"]
+[node name="FallShadow" type="Sprite" parent="MrUpbeat/mirror" index="0"]
 
+visible = false
+position = Vector2( 12.9055, -2.86788 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 354, 267, 100, 30 )
+region_filter_clip = true
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Body" type="Node2D" parent="MrUpbeat/mirror" index="1"]
+
+editor/display_folded = true
 script = ExtResource( 3 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 __meta__ = {
 "_editor_icon": ExtResource( 4 )
 }
 Switch_Type = 1
-Set_Integer = 3
+Set_Integer = 1
 Set_Float = -1.0
 Set_Name = ""
 Float_Type = 0
 
 [node name="Body1" type="Sprite" parent="MrUpbeat/mirror/Body" index="0"]
 
-visible = false
 position = Vector2( -14.989, -37.3388 )
 texture = ExtResource( 5 )
 region_enabled = true
@@ -389,6 +668,7 @@ _sections_unfolded = [ "Region", "Transform" ]
 
 [node name="Body3" type="Sprite" parent="MrUpbeat/mirror/Body" index="2"]
 
+visible = false
 position = Vector2( -14.989, -28.2752 )
 texture = ExtResource( 5 )
 region_enabled = true
@@ -396,9 +676,60 @@ region_rect = Rect2( 114, 202, 100, 84 )
 region_filter_clip = true
 _sections_unfolded = [ "Region", "Transform" ]
 
-[node name="Head" type="Sprite" parent="MrUpbeat/mirror" index="1"]
+[node name="Body4" type="Sprite" parent="MrUpbeat/mirror/Body" index="3"]
 
-position = Vector2( -26.269, -58.4332 )
+visible = false
+position = Vector2( 15.1524, -25.8613 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 2, 3, 108, 67 )
+region_filter_clip = true
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="Body5" type="Sprite" parent="MrUpbeat/mirror/Body" index="4"]
+
+visible = false
+position = Vector2( 12.0093, -18.1214 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 2, 83, 108, 67 )
+region_filter_clip = true
+_sections_unfolded = [ "Region", "Transform", "Visibility" ]
+
+[node name="Body6" type="Sprite" parent="MrUpbeat/mirror/Body" index="5"]
+
+visible = false
+position = Vector2( 18.8608, -18.6485 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 2, 155, 108, 67 )
+region_filter_clip = true
+_sections_unfolded = [ "Region", "Transform", "Visibility" ]
+
+[node name="Body7" type="Sprite" parent="MrUpbeat/mirror/Body" index="6"]
+
+visible = false
+position = Vector2( 18.9379, -14.9308 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 2, 227, 108, 60 )
+region_filter_clip = true
+_sections_unfolded = [ "Region", "Transform", "Visibility" ]
+
+[node name="Body8" type="Sprite" parent="MrUpbeat/mirror/Body" index="7"]
+
+visible = false
+position = Vector2( 18.5505, -22.6793 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 2, 291, 108, 50 )
+region_filter_clip = true
+_sections_unfolded = [ "Region", "Transform", "Visibility" ]
+
+[node name="Head" type="Sprite" parent="MrUpbeat/mirror" index="2"]
+
+editor/display_folded = true
+position = Vector2( -26.269, -63.5031 )
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 218, 3, 60, 59 )
@@ -423,13 +754,16 @@ scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Motion" type="Node2D" parent="MrUpbeat/mirror" index="2"]
+[node name="Motion" type="Node2D" parent="MrUpbeat/mirror" index="3"]
 
-editor/display_folded = true
 _sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Motion1" type="Sprite" parent="MrUpbeat/mirror/Motion" index="0"]
 
+visible = false
 position = Vector2( -4.98207, -72.3555 )
 texture = ExtResource( 5 )
 region_enabled = true
@@ -438,10 +772,30 @@ _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 
 [node name="Motion2" type="Sprite" parent="MrUpbeat/mirror/Motion" index="1"]
 
+visible = false
 position = Vector2( 18.4537, -25.1083 )
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 186, 355, 44, 59 )
+_sections_unfolded = [ "Region", "Transform", "Visibility" ]
+
+[node name="Motion3" type="Sprite" parent="MrUpbeat/mirror/Motion" index="2"]
+
+visible = false
+position = Vector2( -18.8845, -39.408 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 114, 355, 68, 59 )
+_sections_unfolded = [ "Region", "Transform", "Visibility" ]
+
+[node name="Motion4" type="Sprite" parent="MrUpbeat/mirror/Motion" index="3"]
+
+visible = false
+position = Vector2( 11.3038, 3.92252 )
+rotation = 3.16777
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 410, 3, 100, 59 )
 _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 
 [node name="move" type="AnimationPlayer" parent="MrUpbeat" index="2"]
@@ -451,9 +805,11 @@ autoplay = "INIT"
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 60.0
-anims/INIT = SubResource( 4 )
-anims/step_left = SubResource( 5 )
-anims/step_right = SubResource( 2 )
+anims/INIT = SubResource( 1 )
+anims/step_left = SubResource( 2 )
+anims/step_right = SubResource( 3 )
+anims/trip_left = SubResource( 4 )
+anims/trip_right = SubResource( 5 )
 blend_times = [  ]
 _sections_unfolded = [ "Playback Options" ]
 
@@ -464,7 +820,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 24.0
-anims/beep = SubResource( 3 )
+anims/beep = SubResource( 6 )
 blend_times = [  ]
 _sections_unfolded = [ "Playback Options" ]
 
