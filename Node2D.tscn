@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Knome.gd" type="Script" id=1]
 [ext_resource path="res://808-Kicks03.wav" type="AudioStream" id=2]
@@ -128,7 +128,260 @@ tracks/8/keys = {
 
 [sub_resource type="Animation" id=2]
 
-resource_name = "step_left"
+resource_name = "bump_left"
+length = 6.0
+loop = false
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("mirror/FallShadow:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Shadow:Set_Integer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("mirror:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("mirror/Body:Set_Integer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 10, 11 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("mirror/Head:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 0, 0, 0 ),
+"update": 0,
+"values": [ Vector2( 1.34839, -22.1369 ), Vector2( 5.42443, -28.6689 ), Vector2( 2.05052, -32.8759 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("mirror/Motion/Motion1:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("mirror/Motion/Motion2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("mirror/Motion/Motion4:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("mirror/Motion/Motion4:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 67.5861, -21.53 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("mirror/Motion/Motion4:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "bump_right"
+length = 6.0
+loop = false
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("mirror/FallShadow:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Shadow:Set_Integer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("mirror:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("mirror/Body:Set_Integer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 10, 11 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("mirror/Head:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 0, 0, 0 ),
+"update": 0,
+"values": [ Vector2( 1.34839, -22.1369 ), Vector2( 5.42443, -28.6689 ), Vector2( 2.05052, -32.8759 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("mirror/Motion/Motion1:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("mirror/Motion/Motion2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("mirror/Motion/Motion4:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("mirror/Motion/Motion4:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 67.5861, -21.53 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("mirror/Motion/Motion4:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+
 length = 7.0
 loop = false
 step = 1.0
@@ -205,7 +458,7 @@ tracks/5/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=5]
 
 length = 7.0
 loop = false
@@ -283,9 +536,8 @@ tracks/5/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=6]
 
-resource_name = "trip_left"
 length = 10.0
 loop = false
 step = 1.0
@@ -397,10 +649,33 @@ tracks/8/keys = {
 "update": 1,
 "values": [ true, false ]
 }
+tracks/9/type = "value"
+tracks/9/path = NodePath("mirror/Motion/Motion4:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 11.3038, 3.92252 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("mirror/Motion/Motion4:rotation_degrees")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 181.5 ]
+}
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=7]
 
-resource_name = "trip_right"
 length = 10.0
 loop = false
 step = 1.0
@@ -512,8 +787,32 @@ tracks/8/keys = {
 "update": 1,
 "values": [ true, false ]
 }
+tracks/9/type = "value"
+tracks/9/path = NodePath("mirror/Motion/Motion4:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 11.3038, 3.92252 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("mirror/Motion/Motion4:rotation_degrees")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 181.5 ]
+}
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=8]
 
 length = 6.0
 loop = false
@@ -712,7 +1011,7 @@ visible = false
 position = Vector2( 18.9379, -14.9308 )
 texture = ExtResource( 5 )
 region_enabled = true
-region_rect = Rect2( 2, 227, 108, 60 )
+region_rect = Rect2( 2, 227, 108, 59 )
 region_filter_clip = true
 _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 
@@ -723,6 +1022,36 @@ position = Vector2( 18.5505, -22.6793 )
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 2, 291, 108, 50 )
+region_filter_clip = true
+_sections_unfolded = [ "Region", "Transform", "Visibility" ]
+
+[node name="Body9" type="Sprite" parent="MrUpbeat/mirror/Body" index="8"]
+
+visible = false
+position = Vector2( 18.5505, -15.238 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 218, 275, 132, 59 )
+region_filter_clip = true
+_sections_unfolded = [ "Region", "Transform", "Visibility" ]
+
+[node name="Body10" type="Sprite" parent="MrUpbeat/mirror/Body" index="9"]
+
+visible = false
+position = Vector2( 18.5505, -15.238 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 218, 211, 132, 59 )
+region_filter_clip = true
+_sections_unfolded = [ "Region", "Transform", "Visibility" ]
+
+[node name="Body11" type="Sprite" parent="MrUpbeat/mirror/Body" index="10"]
+
+visible = false
+position = Vector2( 18.5505, -15.238 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 218, 147, 132, 59 )
 region_filter_clip = true
 _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 
@@ -791,8 +1120,7 @@ _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 [node name="Motion4" type="Sprite" parent="MrUpbeat/mirror/Motion" index="3"]
 
 visible = false
-position = Vector2( 11.3038, 3.92252 )
-rotation = 3.16777
+position = Vector2( 67.5861, -21.53 )
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 410, 3, 100, 59 )
@@ -806,10 +1134,12 @@ playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 60.0
 anims/INIT = SubResource( 1 )
-anims/step_left = SubResource( 2 )
-anims/step_right = SubResource( 3 )
-anims/trip_left = SubResource( 4 )
-anims/trip_right = SubResource( 5 )
+anims/bump_left = SubResource( 2 )
+anims/bump_right = SubResource( 3 )
+anims/step_left = SubResource( 4 )
+anims/step_right = SubResource( 5 )
+anims/trip_left = SubResource( 6 )
+anims/trip_right = SubResource( 7 )
 blend_times = [  ]
 _sections_unfolded = [ "Playback Options" ]
 
@@ -820,7 +1150,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 24.0
-anims/beep = SubResource( 6 )
+anims/beep = SubResource( 8 )
 blend_times = [  ]
 _sections_unfolded = [ "Playback Options" ]
 
