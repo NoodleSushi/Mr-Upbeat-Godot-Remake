@@ -1,15 +1,13 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Knome.gd" type="Script" id=1]
-[ext_resource path="res://808-Kicks03.wav" type="AudioStream" id=2]
-[ext_resource path="res://addons/Switch2D/Switch2D.gd" type="Script" id=3]
-[ext_resource path="res://addons/Switch2D/icon16.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/79004.png" type="Texture" id=5]
-[ext_resource path="res://head.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Mr._Upbeat_Wii.png" type="Texture" id=7]
-[ext_resource path="res://Audio/step.ogg" type="AudioStream" id=8]
-[ext_resource path="res://new_dynamicfont.tres" type="DynamicFont" id=9]
-[ext_resource path="res://Audio/ding.wav" type="AudioStream" id=10]
+[ext_resource path="res://addons/Switch2D/Switch2D.gd" type="Script" id=2]
+[ext_resource path="res://addons/Switch2D/icon16.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/79004.png" type="Texture" id=4]
+[ext_resource path="res://head.png" type="Texture" id=5]
+[ext_resource path="res://Audio/step.ogg" type="AudioStream" id=6]
+[ext_resource path="res://new_dynamicfont.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Audio/ding.wav" type="AudioStream" id=8]
 
 [sub_resource type="Animation" id=1]
 
@@ -870,8 +868,9 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="Audio" type="AudioStreamPlayer" parent="." index="1"]
 
-stream = ExtResource( 2 )
+stream = null
 volume_db = -15.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
@@ -883,13 +882,13 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Shadow" type="Node2D" parent="MrUpbeat" index="0"]
 
-script = ExtResource( 3 )
+script = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
-"_editor_icon": ExtResource( 4 )
+"_editor_icon": ExtResource( 3 )
 }
 Switch_Type = 1
-Set_Integer = 1
+Set_Integer = 0
 Set_Float = -1.0
 Set_Name = ""
 Float_Type = 0
@@ -897,7 +896,7 @@ Float_Type = 0
 [node name="Shadow1" type="Sprite" parent="MrUpbeat/Shadow" index="0"]
 
 position = Vector2( -20.7451, -28.1926 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 314, 67, 92, 75 )
 region_filter_clip = true
@@ -907,7 +906,7 @@ _sections_unfolded = [ "Region", "Transform" ]
 
 visible = false
 position = Vector2( -8.14029, -28.1926 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 218, 67, 92, 75 )
 region_filter_clip = true
@@ -926,7 +925,7 @@ visible = false
 position = Vector2( 12.9055, -2.86788 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 354, 267, 100, 30 )
 region_filter_clip = true
@@ -935,13 +934,13 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 [node name="Body" type="Node2D" parent="MrUpbeat/mirror" index="1"]
 
 editor/display_folded = true
-script = ExtResource( 3 )
+script = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 __meta__ = {
-"_editor_icon": ExtResource( 4 )
+"_editor_icon": ExtResource( 3 )
 }
 Switch_Type = 1
-Set_Integer = 1
+Set_Integer = 0
 Set_Float = -1.0
 Set_Name = ""
 Float_Type = 0
@@ -949,7 +948,7 @@ Float_Type = 0
 [node name="Body1" type="Sprite" parent="MrUpbeat/mirror/Body" index="0"]
 
 position = Vector2( -14.989, -37.3388 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 114, 3, 100, 99 )
 region_filter_clip = true
@@ -959,7 +958,7 @@ _sections_unfolded = [ "Region", "Transform" ]
 
 visible = false
 position = Vector2( -14.989, -35.6462 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 114, 107, 100, 91 )
 region_filter_clip = true
@@ -969,7 +968,7 @@ _sections_unfolded = [ "Region", "Transform" ]
 
 visible = false
 position = Vector2( -14.989, -28.2752 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 114, 202, 100, 84 )
 region_filter_clip = true
@@ -979,7 +978,7 @@ _sections_unfolded = [ "Region", "Transform" ]
 
 visible = false
 position = Vector2( 15.1524, -25.8613 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 2, 3, 108, 67 )
 region_filter_clip = true
@@ -989,7 +988,7 @@ _sections_unfolded = [ "Region", "Transform" ]
 
 visible = false
 position = Vector2( 12.0093, -18.1214 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 2, 83, 108, 67 )
 region_filter_clip = true
@@ -999,7 +998,7 @@ _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 
 visible = false
 position = Vector2( 18.8608, -18.6485 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 2, 155, 108, 67 )
 region_filter_clip = true
@@ -1009,7 +1008,7 @@ _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 
 visible = false
 position = Vector2( 18.9379, -14.9308 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 2, 227, 108, 59 )
 region_filter_clip = true
@@ -1019,7 +1018,7 @@ _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 
 visible = false
 position = Vector2( 18.5505, -22.6793 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 2, 291, 108, 50 )
 region_filter_clip = true
@@ -1029,7 +1028,7 @@ _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 
 visible = false
 position = Vector2( 18.5505, -15.238 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 218, 275, 132, 59 )
 region_filter_clip = true
@@ -1039,7 +1038,7 @@ _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 
 visible = false
 position = Vector2( 18.5505, -15.238 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 218, 211, 132, 59 )
 region_filter_clip = true
@@ -1049,7 +1048,7 @@ _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 
 visible = false
 position = Vector2( 18.5505, -15.238 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 218, 147, 132, 59 )
 region_filter_clip = true
@@ -1059,7 +1058,7 @@ _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 
 editor/display_folded = true
 position = Vector2( -26.269, -63.5031 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 218, 3, 60, 59 )
 region_filter_clip = true
@@ -1070,7 +1069,7 @@ _sections_unfolded = [ "Region", "Transform" ]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 0, -24.0318 )
 rotation = 1.5708
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 282, 355, 52, 43 )
 region_filter_clip = true
@@ -1080,7 +1079,7 @@ _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 
 visible = false
 scale = Vector2( 0.8, 0.8 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Motion" type="Node2D" parent="MrUpbeat/mirror" index="3"]
@@ -1094,7 +1093,7 @@ __meta__ = {
 
 visible = false
 position = Vector2( -4.98207, -72.3555 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 2, 355, 108, 51 )
 _sections_unfolded = [ "Region", "Transform", "Visibility" ]
@@ -1103,7 +1102,7 @@ _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 
 visible = false
 position = Vector2( 18.4537, -25.1083 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 186, 355, 44, 59 )
 _sections_unfolded = [ "Region", "Transform", "Visibility" ]
@@ -1112,7 +1111,7 @@ _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 
 visible = false
 position = Vector2( -18.8845, -39.408 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 114, 355, 68, 59 )
 _sections_unfolded = [ "Region", "Transform", "Visibility" ]
@@ -1121,7 +1120,7 @@ _sections_unfolded = [ "Region", "Transform", "Visibility" ]
 
 visible = false
 position = Vector2( 67.5861, -21.53 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 410, 3, 100, 59 )
 _sections_unfolded = [ "Region", "Transform", "Visibility" ]
@@ -1156,41 +1155,34 @@ _sections_unfolded = [ "Playback Options" ]
 
 [node name="Metronome" type="Sprite" parent="." index="3"]
 
-position = Vector2( -7.33756e-06, 97.0442 )
+position = Vector2( -7.33756e-006, 97.0442 )
 rotation = 1.5708
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 offset = Vector2( -32, 0 )
 region_enabled = true
 region_rect = Rect2( 2, 450, 412, 60 )
 region_filter_clip = true
 _sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="Mr._Upbeat_Wii" type="Sprite" parent="." index="4"]
-
-visible = false
-modulate = Color( 1, 1, 1, 0.458549 )
-position = Vector2( 0.623589, 37.5893 )
-scale = Vector2( 0.7, 0.7 )
-texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
-
-[node name="Announcer" type="AudioStreamPlayer" parent="." index="5"]
+[node name="Announcer" type="AudioStreamPlayer" parent="." index="4"]
 
 stream = null
 volume_db = -4.9
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="Audio_Step" type="AudioStreamPlayer" parent="." index="6"]
+[node name="Audio_Step" type="AudioStreamPlayer" parent="." index="5"]
 
-stream = ExtResource( 8 )
+stream = ExtResource( 6 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="Score" type="Label" parent="." index="7"]
+[node name="Score" type="Label" parent="." index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1206,7 +1198,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 9 )
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0.882353, 0.235294, 0.156863, 1 )
 text = "PLACEHOLDER"
 align = 2
@@ -1215,10 +1207,11 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
-[node name="Ding" type="AudioStreamPlayer" parent="." index="8"]
+[node name="Ding" type="AudioStreamPlayer" parent="." index="7"]
 
-stream = ExtResource( 10 )
+stream = ExtResource( 8 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
